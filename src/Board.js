@@ -23,10 +23,13 @@ export default class Board extends Component {
 
   render() {
     return (
-      <div>
-        <Square black>
-          <Knight />
-        </Square>
+      <div style={{
+        width: '300px',
+        height: '300px',
+      }}>
+        {this.renderSquare(0,0)}
+        {this.renderSquare(1,0)}
+        {this.renderSquare(2,0)}
       </div>
     );
   }
