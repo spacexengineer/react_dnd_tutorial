@@ -1,9 +1,11 @@
 import React, { Component, PropTypes } from 'react';
+import { DragDropContext } from 'react-dnd';
+import HTML5Backend from 'react-dnd-html5-backend';
 import Square from './Square';
 import Knight from './Knight';
 import { canMoveKnight, moveKnight } from './Game';
 
-export default class Board extends Component {
+class Board extends Component {
   static propTypes = {
     knightPosition: PropTypes.arrayOf(
       PropTypes.number.isRequired
@@ -52,3 +54,6 @@ export default class Board extends Component {
     );
   }
 }
+
+// because of this http://babeljs.io/docs/plugins/transform-decorators/
+export default DragDropContext(HTML5Backend)(Board);
