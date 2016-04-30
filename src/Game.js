@@ -21,9 +21,6 @@ export function moveKnight(toX, toY) {
 
 export function canMoveKnight(toX, toY) {
   const [x, y] = knightPosition;
-  console.log('knightPosition: ', knightPosition);
-  console.log('x: ', x);
-  console.log('y: ', y);
   const dx = toX - x;
   const dy = toY - y;
 
